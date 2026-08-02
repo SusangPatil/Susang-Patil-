@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUSANG | Personal Tech & Developer Portfolio</title>
+  <meta name="description" content="Personal Developer Portfolio of Susang Patil - 1st Year B.Tech Computer Engineering student at NMIMS Shirpur. C Programming enthusiast and music lover.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Animated Cyber Grid & Glowing Orbs -->
+  <div class="cyber-bg">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="cyber-grid"></div>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="top-announcement" id="topAnnouncement">
+    <div class="announcement-content">
+      <span class="badge">CODING PORTFOLIO</span>
+      <p>🚀 WELCOME TO SUSANG PATIL'S CYBER DEVELOPER CONSOLE | B.TECH CE @ NMIMS SHIRPUR</p>
+      <button class="close-announcement" id="closeAnnouncementBtn" aria-label="Close Announcement">&times;</button>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar" id="mainNavbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" id="navBrandLogo">
+        <span class="brand-welcome">WELCOME</span>
+        <span class="brand-name">SUSANG</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link active" id="navLinkHero"><i class="fa-solid fa-gauge-high"></i> HUD Console</a></li>
+        <li><a href="#about" class="nav-link" id="navLinkAbout"><i class="fa-solid fa-user-astronaut"></i> Bio</a></li>
+        <li><a href="#c-terminal" class="nav-link" id="navLinkCTerminal"><i class="fa-solid fa-code"></i> C Code Terminal</a></li>
+        <li><a href="#music-lounge" class="nav-link" id="navLinkMusic"><i class="fa-solid fa-music"></i> Music Lounge</a></li>
+        <li><a href="#roadmap" class="nav-link" id="navLinkRoadmap"><i class="fa-solid fa-graduation-cap"></i> NMIMS CE</a></li>
+        <li><a href="#contact" class="nav-link nav-btn-primary" id="navLinkContact"><i class="fa-solid fa-paper-plane"></i> Contact Me</a></li>
+      </ul>
+
+      <button class="hamburger-menu" id="hamburgerMenuBtn" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Futuristic Cyber HUD Console -->
+  <section class="hero-section" id="hero">
+    <div class="section-container">
+      
+      <!-- Big Hero Header Title -->
+      <div class="hero-header-box" id="heroHeaderBox">
+        <div class="hero-tag"><i class="fa-solid fa-terminal"></i> STUDENT PORTFOLIO HUD</div>
+        <h1 class="hero-big-title">WELCOME</h1>
+        <p class="hero-subtitle">Entering the World of Computer Science & Coding Excellence</p>
+      </div>
+
+      <!-- Cyber Command HUD Container (Replaces Car Dashboard Visual) -->
+      <div class="cyber-hud-console" id="cyberHudConsole">
+        
+        <!-- Top HUD Header Status -->
+        <div class="hud-top-bar">
+          <div class="hud-status-indicator">
+            <span class="live-dot"></span>
+            <span class="hud-status-text">SYSTEM STATUS: CODING ENTHUSIAST READY</span>
+          </div>
+          <div class="hud-clock" id="hudClock">14:32:00 IST</div>
+          <div class="hud-badge">NMIMS SHIRPUR - B.TECH CE 1ST YEAR</div>
+        </div>
+
+        <!-- Central HUD Screen & Gauges Grid -->
+        <div class="hud-main-grid">
+
+          <!-- Left Side: Interactive Speedometer / Coding RPM Gauge -->
+          <div class="hud-gauge-card" id="hudGaugeCard">
+            <div class="gauge-title">CODING SPEED & PASSION</div>
+            <div class="speedometer-container">
+              <svg class="speed-svg" viewBox="0 0 200 200">
+                <circle class="speed-bg-track" cx="100" cy="100" r="80"></circle>
+                <circle class="speed-fill-track" id="speedFillTrack" cx="100" cy="100" r="80"></circle>
+              </svg>
+              <div class="speed-display">
+                <span class="speed-number" id="speedValue">99</span>
+                <span class="speed-unit">KM/H</span>
+                <span class="speed-label">MOTIVATION RPM</span>
+              </div>
+            </div>
+            <div class="gauge-metrics">
+              <div class="metric-item">
+                <span class="metric-val">C LANG</span>
+                <span class="metric-lbl">CURRENT FOCUS</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">B.TECH</span>
+                <span class="metric-lbl">CE BRANCH</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Cyber Cockpit Screen with Dynamic Intro -->
+          <div class="hud-display-screen" id="hudDisplayScreen">
+            <div class="screen-header">
+              <div class="screen-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="screen-title"><i class="fa-solid fa-display"></i> SUSANG HUD TELEMETRY SCREEN</div>
+              <div class="screen-mode-pill" id="currentHudModePill">MODE: BIO INTRO</div>
+            </div>
+
+            <!-- Dynamic HUD Screen Output Box -->
+            <div class="hud-text-output" id="hudTextOutput">
+              <p class="intro-typing-text" id="introTypingText">
+                "Hi, I am Susang Patil — pursuing B.Tech from NMIMS College Shirpur for CE branch."
+              </p>
+            </div>
+
+            <!-- Screen Visual Banner -->
+            <div class="hud-screen-banner">
+              <img src="assets/hud_visual.jpg" alt="Cyber HUD Console Graphic" class="hud-banner-img" id="hudBannerImg">
+              <div class="banner-overlay">
+                <span><i class="fa-solid fa-code"></i> Learning C Programming</span>
+                <span><i class="fa-solid fa-building-columns"></i> NMIMS CE 2026-2030</span>
+              </div>
+            </div>
+
+            <!-- HUD Control Switcher Buttons -->
+            <div class="hud-controls-toolbar">
+              <button class="hud-btn active" id="btnHudBio" onclick="switchHudMode('bio')">
+                <i class="fa-solid fa-id-card"></i> BIO INTRO
+              </button>
+              <button class="hud-btn" id="btnHudCProg" onclick="switchHudMode('cprog')">
+                <i class="fa-solid fa-microchip"></i> C LANG STATUS
+              </button>
+              <button class="hud-btn" id="btnHudNMIMS" onclick="switchHudMode('nmims')">
+                <i class="fa-solid fa-graduation-cap"></i> NMIMS SHIRPUR
+              </button>
+              <button class="hud-btn" id="btnHudGoals" onclick="switchHudMode('goals')">
+                <i class="fa-solid fa-bullseye"></i> TECH GOALS
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: 3 Core Pillars -->
+  <section class="section-padding section-dark-alt" id="about">
+    <div class="section-container">
+      
+      <div class="section-header center">
+        <span class="section-tag">ENGINEERING MINDSET</span>
+        <h2 class="section-title">Imagine a Student Driven by Passion & Discipline</h2>
+        <p class="section-desc">Every line of code crafted with curiosity, purpose, and creative focus.</p>
+      </div>
+
+      <div class="three-pillars-grid">
+        
+        <!-- Pillar 1 -->
+        <div class="pillar-card" id="pillarCard1">
+          <div class="pillar-icon">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3>C Logic & Fundamentals</h3>
+          <p>Diving deep into the fundamentals of C programming. Mastered variables, loops, arrays, pointers, and memory mechanics to build rock-solid coding foundations.</p>
+          <div class="pillar-tag"><i class="fa-solid fa-check"></i> Active Learner</div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card" id="pillarCard2">
+          <div class="pillar-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3>B.Tech CE @ NMIMS Shirpur</h3>
+          <p>Proudly pursuing Computer Engineering at NMIMS College, Shirpur (1st Year). Thriving in a high-energy academic environment focused on technology and innovation.</p>
+          <div class="pillar-tag"><i class="fa-solid fa-university"></i> Batch 2026-2030</div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card" id="pillarCard3">
+          <div class="pillar-icon">
+            <i class="fa-solid fa-headphones"></i>
+          </div>
+          <h3>Creative Vocal Artist</h3>
+          <p>Beyond code syntax lies a creative heart. Passionate about singing and listening to music—bringing rhythm, harmony, and creative problem-solving to tech projects.</p>
+          <div class="pillar-tag"><i class="fa-solid fa-music"></i> Singer & Music Enthusiast</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Interactive C Programming Terminal Showcase -->
+  <section class="section-padding" id="c-terminal">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-terminal"></i> LIVE CODE REPOSITORY</span>
+        <h2 class="section-title">Entering the World of C Programming</h2>
+        <p class="section-desc">Explore the exact C code programs Susang is writing as he builds strong problem-solving skills.</p>
+      </div>
+
+      <div class="c-terminal-wrapper" id="cTerminalWrapper">
+        
+        <!-- Code Tabs Header -->
+        <div class="terminal-header">
+          <div class="terminal-tabs">
+            <button class="terminal-tab active" id="tabHelloC" onclick="loadCSnippet('hello')">
+              <i class="fa-solid fa-file-code"></i> hello_world.c
+            </button>
+            <button class="terminal-tab" id="tabFactorialC" onclick="loadCSnippet('factorial')">
+              <i class="fa-solid fa-file-code"></i> speed_rpm.c
+            </button>
+            <button class="terminal-tab" id="tabPatternC" onclick="loadCSnippet('pattern')">
+              <i class="fa-solid fa-file-code"></i> nmims_ce.c
+            </button>
+          </div>
+          <div class="terminal-actions">
+            <button class="btn-run-code" id="btnRunCode" onclick="runCSimulator()">
+              <i class="fa-solid fa-play"></i> RUN C CODE
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Code Editor View -->
+        <div class="terminal-body">
+          <div class="line-numbers">
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+            <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+          </div>
+          <pre class="code-content"><code id="codeSnippetBox">#include &lt;stdio.h&gt;
+
+int main() {
+    // Susang Patil's First Step in Coding
+    printf("=== WELCOME TO SUSANG'S TECH WORLD ===\n");
+    printf("Name: Susang Patil\n");
+    printf("College: NMIMS College Shirpur\n");
+    printf("Branch: B.Tech Computer Engineering (CE 1st Year)\n");
+    
+    return 0;
+}</code></pre>
+        </div>
+
+        <!-- Simulated Terminal Output Console -->
+        <div class="terminal-output-panel" id="terminalOutputPanel">
+          <div class="output-bar">
+            <span><i class="fa-solid fa-square-poll-vertical"></i> GCC COMPILER CONSOLE OUTPUT</span>
+            <span class="status-success" id="compilerStatus">READY</span>
+          </div>
+          <div class="output-content" id="outputContent">
+            <p class="output-line dim">$ gcc hello_world.c -o hello_world && ./hello_world</p>
+            <p class="output-line highlight">=== WELCOME TO SUSANG'S TECH WORLD ===</p>
+            <p class="output-line">Name: Susang Patil</p>
+            <p class="output-line">College: NMIMS College Shirpur</p>
+            <p class="output-line success">Branch: B.Tech Computer Engineering (CE 1st Year)</p>
+            <p class="output-line dim">[Process exited with code 0 - Execution Time: 0.04s]</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4: Hobbies & Creative Expression - Acoustic Music Lounge -->
+  <section class="section-padding section-dark-alt" id="music-lounge">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-guitar"></i> HOBBIES & CREATIVITY</span>
+        <h2 class="section-title">The Acoustic & Music Lounge</h2>
+        <p class="section-desc">"Music provides the rhythm that powers my late-night coding logic." — Susang Patil</p>
+      </div>
+
+      <div class="music-lounge-grid">
+        
+        <!-- Left Column: Music Visual Card with Constant Animated Equalizer Waveform -->
+        <div class="music-player-card" id="musicPlayerCard">
+          <div class="music-banner">
+            <img src="assets/music_visual.jpg" alt="Acoustic Studio Visual" class="music-bg-img" id="musicBgImg">
+            <div class="music-badge"><i class="fa-solid fa-compact-disc"></i> ACOUSTIC LOUNGE</div>
+          </div>
+
+          <div class="player-content">
+            <div class="track-info">
+              <h3 class="track-title" id="trackTitle">Acoustic Unplugged Session</h3>
+              <p class="track-artist" id="trackArtist">Vocal Performance & Guitar Melodies | Susang Patil</p>
+            </div>
+
+            <!-- Always-Animating Equalizer Waveform -->
+            <div class="equalizer-box" id="equalizerBox">
+              <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+              <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+              <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            </div>
+
+            <!-- Visual Sound Wave Progress Indicator -->
+            <div class="progress-container">
+              <span class="time-curr" id="timeCurrent">LIVE</span>
+              <div class="progress-bar-track">
+                <div class="progress-fill" id="progressFill" style="width: 100%;"></div>
+              </div>
+              <span class="time-dur" id="timeDuration">SPECTRUM</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Hobbies Information -->
+        <div class="hobbies-info-box">
+          <div class="hobby-card">
+            <div class="hobby-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+            <div class="hobby-details">
+              <h4>Vocal Singing</h4>
+              <p>Love singing classic Indian melodies & acoustic covers. Singing improves focus, breath control, and creative clarity.</p>
+            </div>
+          </div>
+
+          <div class="hobby-card">
+            <div class="hobby-icon"><i class="fa-solid fa-headphones-simple"></i></div>
+            <div class="hobby-details">
+              <h4>Music & Coding Focus</h4>
+              <p>Listening to acoustic, lo-fi, and instrumental music while solving C programming logic problems.</p>
+            </div>
+          </div>
+
+          <!-- Featured Track Vibes (Without Susang's Playlist title) -->
+          <div class="playlist-box">
+            <h4><i class="fa-solid fa-music"></i> Favorite Track Vibes</h4>
+            <div class="playlist-item active" onclick="selectTrack(0)">
+              <span class="track-num">01</span>
+              <div class="track-meta">
+                <span class="t-name">Acoustic Unplugged Session</span>
+                <span class="t-sub">Vocals & Acoustic Guitar Vibe</span>
+              </div>
+              <i class="fa-solid fa-wave-square"></i>
+            </div>
+            <div class="playlist-item" onclick="selectTrack(1)">
+              <span class="track-num">02</span>
+              <div class="track-meta">
+                <span class="t-name">C Code Focus Beats</span>
+                <span class="t-sub">Instrumental Rhythm for Logic Building</span>
+              </div>
+              <i class="fa-solid fa-wave-square"></i>
+            </div>
+            <div class="playlist-item" onclick="selectTrack(2)">
+              <span class="track-num">03</span>
+              <div class="track-meta">
+                <span class="t-name">NMIMS Campus Evening Jam</span>
+                <span class="t-sub">Relaxing Vocals after Coding Practice</span>
+              </div>
+              <i class="fa-solid fa-wave-square"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 5: Academic Roadmap - B.Tech CE @ NMIMS Shirpur -->
+  <section class="section-padding" id="roadmap">
+    <div class="section-container">
+      
+      <div class="section-header center">
+        <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> EDUCATION & ROADMAP</span>
+        <h2 class="section-title">NMIMS College Shirpur — Computer Engineering</h2>
+        <p class="section-desc">Building strong computer engineering roots in 1st year to become a skilled software developer.</p>
+      </div>
+
+      <div class="roadmap-timeline">
+        
+        <!-- Step 1 -->
+        <div class="timeline-card active">
+          <div class="timeline-step">01</div>
+          <div class="timeline-content">
+            <span class="t-date">1ST YEAR (BATCH 2026-2030)</span>
+            <h3>C Programming & Logic Building</h3>
+            <p>Enrolled in B.Tech Computer Engineering at NMIMS Shirpur. Mastering fundamental algorithms, data types, structured programming, and problem-solving techniques.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-card">
+          <div class="timeline-step">02</div>
+          <div class="timeline-content">
+            <span class="t-date">CORE GOAL</span>
+            <h3>Software & Logic Foundation</h3>
+            <p>Building a robust technical foundation to collaborate on engineering projects and software workshops.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-card">
+          <div class="timeline-step">03</div>
+          <div class="timeline-content">
+            <span class="t-date">UPCOMING MILESTONES</span>
+            <h3>Data Structures & Web Dev</h3>
+            <p>Advancing into C++ / Data Structures & Algorithms, Object Oriented Programming, and modern full-stack web applications.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 6: Contact Hub & Email Details -->
+  <section class="section-padding section-dark-alt" id="contact">
+    <div class="section-container">
+      
+      <div class="contact-box-wrapper" id="contactBoxWrapper">
+        
+        <!-- Left Info Column -->
+        <div class="contact-info-col">
+          <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> GET IN TOUCH</span>
+          <h2>Let's Connect & Collaborate!</h2>
+          <p>I am always open to discussing C programming, tech ideas, college projects, and music. Feel free to drop a message!</p>
+
+          <!-- Featured Email Card -->
+          <div class="email-featured-card" id="emailCard">
+            <div class="email-icon-circle">
+              <i class="fa-solid fa-envelope-open-text"></i>
+            </div>
+            <div class="email-details">
+              <span class="email-lbl">DIRECT EMAIL ADDRESS</span>
+              <span class="email-val" id="userEmailText">patil.susang99@gmail.com</span>
+            </div>
+            <button class="btn-copy-email" id="btnCopyEmail" onclick="copyEmailToClipboard()" title="Copy Email">
+              <i class="fa-solid fa-copy"></i> COPY EMAIL
+            </button>
+          </div>
+
+          <!-- Quick Campus Info -->
+          <div class="campus-badge">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>NMIMS University Campus, Shirpur, Maharashtra (Batch 2026-2030)</span>
+          </div>
+        </div>
+
+        <!-- Right Contact Form Column -->
+        <div class="contact-form-col">
+          <form class="cyber-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+            <h3>Send Susang a Message</h3>
+            
+            <div class="form-group">
+              <label for="senderName"><i class="fa-solid fa-user"></i> Your Name</label>
+              <input type="text" id="senderName" placeholder="e.g. Visitor Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="senderEmail"><i class="fa-solid fa-envelope"></i> Your Email</label>
+              <input type="email" id="senderEmail" placeholder="e.g. email@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="senderMessage"><i class="fa-solid fa-comment-dots"></i> Message / Feedback</label>
+              <textarea id="senderMessage" rows="4" placeholder="Hi Susang, great job on your personal cyber HUD portfolio website..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-form" id="btnSubmitForm">
+              <i class="fa-solid fa-paper-plane"></i> SEND MESSAGE NOW
+            </button>
+            <div class="form-status-msg" id="formStatusMsg"></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="section-container footer-content">
+      <div class="footer-brand">
+        <span class="brand-welcome">WELCOME</span>
+        <span class="brand-name">SUSANG</span>
+        <p>NMIMS College Shirpur | B.Tech Computer Engineering (Batch 2026-2030)</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">HUD Console</a>
+        <a href="#c-terminal">C Code</a>
+        <a href="#music-lounge">Music Lounge</a>
+        <a href="#roadmap">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-copy">
+        <p>© 2026 Susang Patil. All rights reserved.</p>
+        <p class="email-note"><i class="fa-solid fa-envelope"></i> patil.susang99@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification Toast Popup -->
+  <div class="toast-popup" id="toastPopup">
+    <i class="fa-solid fa-circle-check"></i> <span id="toastMsg">Email copied to clipboard!</span>
+  </div>
+
+  <!-- Custom JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
